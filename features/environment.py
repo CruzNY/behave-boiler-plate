@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 from behave.fixture import use_fixture_by_tag
 
-from helpers.WebHelper import get_browser
+from helpers.driver_generator import get_browser
 
  
 def before_all(context):
