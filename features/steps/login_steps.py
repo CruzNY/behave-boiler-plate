@@ -6,6 +6,8 @@ from behave import given
 def log_in(context):
     # TODO add login logic here
     print('test')
+    context.browser.open('https://google.com')
+    context.browser.maximize()
     # go to url and
     # enter email
     # enter passwrong
