@@ -11,14 +11,19 @@ class DriverFunctions(object):
         self._driver = driver
  
     def open(self, url):
+        """
+        Go to url
+        """
         self._driver.get(url)
  
     def maximize(self):
         self._driver.maximize_window()        
-        
+
     def close(self):
+        """
+        closes the browser
+        """
         self._driver.quit()
-        
     # Helper functions that are used to identify the web locators in Selenium Python tutorial  
  
     def find_by_xpath(self, xpath):

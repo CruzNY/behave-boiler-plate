@@ -1,7 +1,7 @@
 
 from selenium.webdriver.support.wait import WebDriverWait
 
-from helpers.HelperFunc import HelperFunc
+from helpers.driver_functions import HelperFunc
 
 def __init__(self, driver):
         super(HelperFunc, self).__init__()
