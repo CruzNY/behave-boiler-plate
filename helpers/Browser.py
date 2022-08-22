@@ -1,11 +1,7 @@
-from distutils.command.config import config
-import os
+from selenium import webdriver
 
-from helpers.driver_generator import get_browser
+from helpers.driver_functions import DriverFunctions
 
-
-my_file = (os.path.join(os.getcwd(),'setup.cfg'))
-config(my_file)
-
-#reading the browser type from the configuration file 
-browser = get_browser(config.get('Environment', "Browser"))
+def get_browser(browser):
+    if browser == 'chrome':
+        return DriverFunctions(webdriver.Chrome())

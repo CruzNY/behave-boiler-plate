@@ -2,12 +2,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
  
-class HelperFunc(object):
+class DriverFunctions(object):
     __TIMEOUT = 10
  
     def __init__(self, driver):
-        super(HelperFunc, self).__init__()
-        self._driver_wait = WebDriverWait(driver, HelperFunc.__TIMEOUT)
+        super(DriverFunctions, self).__init__()
+        self._driver_wait = WebDriverWait(driver, DriverFunctions.__TIMEOUT)
         self._driver = driver
  
     def open(self, url):

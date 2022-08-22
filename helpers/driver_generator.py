@@ -1,7 +1,14 @@
-from selenium import webdriver
+from configparser import ConfigParser
+from distutils.command.config import config
+import os
 
-from helpers.HelperFunc import HelperFunc
+from helpers.browser import get_browser
+class DriverGenerator():
 
-def get_browser(browser):
-    if browser == 'chrome':
-        return HelperFunc(webdriver.Chrome())
+    def generate_driver():
+        config = ConfigParser()
+        my_file = (os.path.join(os.getcwd(),'setup.cfg'))
+        config.read(my_file)
+        browser = get_browser(config.get('Environment', "Browser"))
+        return browser
+
