@@ -5,4 +5,5 @@ Scenario: Test Advance boy
   Then I Click on first checkbox and second checkbox
   When I enter item to add
   When I click add button
-  Then I should verify the added item
+  Then Enter "Yey, Let's add it to list" in the "sampletodotext" field'
+  
