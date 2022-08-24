@@ -16,7 +16,8 @@ class CommonSteps():
         '''
         returns true when element is displayed. 
         '''
-        pass
+        return web_element.is_displayed()
+        
 
     def is_enabled(web_element):
         '''

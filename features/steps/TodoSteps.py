@@ -29,7 +29,7 @@ def enter_item_name(context):
     print("worked")
 '''
 
-@when('Enter {arg1} in the {arg2} field')
+@when('I enter {arg1} in the {arg2} field||textbox')
 def enter_into_field(param1,param2,context):
     web_element = context.browser.find_by_id(param2)
     simple_steps.clear_and_enter_text(param1,web_element)
