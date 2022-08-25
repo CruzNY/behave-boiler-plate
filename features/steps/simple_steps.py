@@ -18,10 +18,10 @@ class SimpleSteps(CommonSteps):
         element = context.browser.find_by_id(web_element)
         self.clear_and_enter_text(text,element);
 
-    @then('I verifty that the {element} is displayed||not displayed')
-    def element_is_displayed(self,element,value,context):
-        print(value)
-        if value.contains('not'):
+    @then('I verifty that the {element} is "{displayed}"')
+    def element_is_displayed(self,element,displayed,context):
+        print(displayed)
+        if displayed.contains('not'):
             element = context.find_element(element[0],element[1])
             assert(not self.is_displayed(element))
         element = context.find_element(element[0],element[1])
