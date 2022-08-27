@@ -2,11 +2,11 @@
 from features.pages import login
 from behave import given
 
-@given(u'I go to php travels')
+@given('I go to php travels')
 def log_in(context):
     # TODO add login logic here
     print('test')
-    context.browser.open('https://google.com')
+    context.browser.open('https://phptravels.net/login')
     context.browser.maximize()
     # go to url and
     # enter email

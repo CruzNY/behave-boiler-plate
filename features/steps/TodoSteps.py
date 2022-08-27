@@ -28,12 +28,12 @@ def enter_item_name(context):
     simple_steps.clear_and_enter_text("Yey, Let's add it to list",web_element)
     print("worked")
 '''
-
-@when('I enter {arg1} in the {arg2} field||textbox')
+'''
+@when('I enter {arg1} in the {arg2} field')
 def enter_into_field(param1,param2,context):
     web_element = context.browser.find_by_id(param2)
     simple_steps.clear_and_enter_text(param1,web_element)
-
+'''
  
 @when('I click add button')
 def click_on_add_button(context):
