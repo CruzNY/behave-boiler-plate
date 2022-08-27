@@ -7,6 +7,7 @@ class SimpleSteps(CommonSteps):
     def click_on_web_element(self,context, element_str):
         element = context.browser.find_by_name(element_str)
         self.click(element)
+    #TODO make sure gherkin goes to corresponding python step method
 
     @then ('I click on the {arg} element||button||icon')
     def click_on_element(self,context,element_str):
@@ -18,7 +19,7 @@ class SimpleSteps(CommonSteps):
         element = context.browser.find_by_id(web_element)
         self.clear_and_enter_text(text,element);
 
-    @then('I verifty that the {element} is "{displayed}"')
+    @then('I verifty that the {element} is displayed')
     def element_is_displayed(self,element,displayed,context):
         print(displayed)
         if displayed.contains('not'):
