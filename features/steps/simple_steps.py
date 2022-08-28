@@ -1,29 +1,16 @@
-from features.steps.common_steps import CommonSteps
-from behave import when, then
+from features.steps.common_steps import CommonSteps as common
+from behave import *
 
-class SimpleSteps(CommonSteps):
-    def __init__(self):
-        super().__init__()
+class SimpleSteps():
+    use_step_matcher("parse")
 
-    def click_on_web_element(self,context, element_str):
-        element = context.browser.find_by_name(element_str)
-        self.click(element)
+    @then('User clicks on the "{element}" button')
+    def click_on(context,element):
+        common.click(context,element)
+    
+    @given('I go to the "{url}" homepage')
+    def go_to(context,url):
+        context.browser.open(url)
+        
 
-    @then('I click on the {arg} button')
-    def click_on_element(self,context,element_str):
-        element = context.browser.find_by_name(element_str)
-        self.click(element)
-
-    @when('I enter {arg1} in the {arg2} field')
-    def enter_text(self,context, text, web_element):
-        element = context.browser.find_by_id(web_element)
-        self.clear_and_enter_text(text,element);
-
-    @then('I verify that the {element} is displayed')
-    def element_is_displayed(self,element,displayed,context):
-        print(displayed)
-        if displayed.contains('not'):
-            element = context.find_element(element[0],element[1])
-            assert(not self.is_displayed(element))
-        element = context.find_element(element[0],element[1])
-        assert(self.is_displayed(element))
+    
