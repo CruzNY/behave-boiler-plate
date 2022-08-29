@@ -1,4 +1,4 @@
 Feature: Successful Login
     Scenario: Login
-        Given I go to php travels
-        Then I verify that the {something} is displayed
+        Given go to url
+        Then click on login        

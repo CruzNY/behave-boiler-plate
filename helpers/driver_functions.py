@@ -34,3 +34,6 @@ class DriverFunctions(object):
  
     def find_by_id(self, id):
         return self._driver_wait.until(EC.visibility_of_element_located((By.ID, id))) 
+
+    def find_element(self,element):
+        return self._driver.find_element(element[0],element[1])

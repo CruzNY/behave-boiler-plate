@@ -1,27 +1,17 @@
 class CommonSteps():
 
-    def click(web_element):
-        web_element.click()
+    def click(element):
+        element.click()
     
-    def clear_and_enter_text(text,text_field):
-        """
-        CLears field and enters text
-        """
+    def clear_and_enter_text():
         pass
 
-    def select_from_dropdown(option,selection):
+    def select_from_dropdown():
         pass
 
-    def is_displayed(web_element):
-        '''
-        returns true when element is displayed. 
-        '''
+    def is_displayed():
         pass
-        
 
-    def is_enabled(web_element):
-        '''
-        returns true when element is enabled
-        '''
+    def is_enabled():
         pass
 
