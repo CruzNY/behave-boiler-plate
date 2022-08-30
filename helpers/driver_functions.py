@@ -37,3 +37,6 @@ class DriverFunctions(object):
 
     def find_element(self,element):
         return self._driver.find_element(element[0],element[1])
+
+    def is_displayed(self,element):
+        return self._driver.is_displayed(element)
